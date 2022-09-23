@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Smooch&family=Titan+One&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&family=Sriracha&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6b6137a28b.js" crossorigin="anonymous"></script>
+
+    
+    <style>
+        *{
+            margin:0px;
+        }
+        h1{
+            text-align:center;
+            font-size:70px;
+        }
+        p{
+            text-align:center;
+            font-size:30px;
+            color:white;
+        }
+        form{
+            width:1200px;
+            height:auto;
+            text-align:justify;
+            margin-left:150px;
+            margin-right:150px;
+            color:white;
+        }
+        fieldset{
+            border-radius:5px;
+            border: 5px black solid;
+        }
+        input{
+            border-radius:10px;
+            border: 3px white solid;
+        }
+        header{
+            color:white;
+            width:100%;
+            height:200px;  
+            font-family: 'Smooch', cursive;       
+            margin-left:-21px;
+        }
+        body{
+            height:1500px;
+            background-image:linear-gradient(coral, deeppink, deeppink, rgb(200, 7, 161),purple);
+            font-family: 'Sriracha', cursive;
+        
+        }
+        nav{
+            display:inline;
+            color:white;
+            margin-left:220px;
+            margin-top:-50px;
+            border-radius:10px;
+            border: 5px black solid;
+            padding:5px;
+        }
+        i{
+            font-size: 20px;
+        }
+        textarea{
+            margin-top:10px;
+            height:120px;
+            width:50%;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+    
+    <Header>
+    <h1>Welcome!</h1>
+    <p>Place your order and we'll get started as soon as possible!</p>
+    </Header>
+    <form id="form">
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" placeholder="Jodi" required>        
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" placeholder="Hunter" required><br>
+        <label for="em">Email</label>
+        <input type="email" id="em" placeholder="Email@example.com" required><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>How will you recive your order?</legend>
+        <label for="fresh">In-store pick up</label>
+        <input type="radio" id="check" name="fresh" placeholder="">
+        <br>
+        <label for="soph">Curbside pick up</label>
+        <input type="radio" id="check" name="soph" placeholder="Sophmore"><br>
+        <label for="soph">Delivery</label>
+        <input type="radio" id="check" name="soph" placeholder="Sophmore">
+        </datalist><br>
+        <legend>Where should we deliver your cake? (Delivery orders only)</legend>
+        <label for="ad">Adress:</label>
+        <input type="text" id="ad" name="addr" placeholder="Adress" >
+        <label for="ad1">City:</label>
+        <input type="text" id="ad1" name="city" placeholder="City" >
+        <label for="st">State:</label>
+        <input type="text" id="st" name="State" placeholder="State" >
+        <label for="zip">ZipCode:</label>
+        <input type="number" id="zip" name="zcode" placeholder="Zipcode"><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Cake details</legend>
+
+        <label for="quant">Cake qauntity:</label>
+        <input type="range" name="cqaunt" min="1" max="10" step="1" oninput="this.nextElementSibling.value = this.value">
+        <output>5</output><br/>
+
+        <label for="cflavor">Flavors:</label>
+        <input type="text" id="cflavor" name="flavor" list="flavors" placeholder="Pick a flavor" required>
+        <datalist id="flavors">
+            <option value="Vanilla"></option>
+            <option value="Chocolate"></option>
+            <option value="Red Velvet"></option>
+            <option value="Strawberry"></option>
+            <option value="Raspberry"></option>
+            <option value="Lemon"></option>
+        </datalist><br>
+
+        <label for="cdecor">Phrases</label>
+        <input type="text" id="cdecor" name="Decor" list="phrases" placeholder="Pick a phrase" required>
+        <datalist id="phrases">
+            <option value="Happy Birthday!"></option>
+            <option value="Get well woon"></option>
+            <option value="It's a celebration!"></option>
+            <option value="Congrats Grad!"></option>
+            <option value="None"></option>
+        </datalist><br>
+
+        <label for="ctop">Cake Toppings:</label><br>
+
+        <label for="ctop">Sprinkles</label>
+        <input type="checkbox" id="ctop" name="topping" value="sprinkles"><br>
+
+        <label for="gen">Frosting</label>
+        <input type="checkbox" id="ctop" name="topping" value="Frosting"><br>
+
+        <label for="gen">Fondant</label>
+        <input type="checkbox" id="ctop" name="topping" value="Fondant"><br>
+
+        <label for="gen">Chocolate Drizzle</label>
+        <input type="checkbox" id="ctop" name="topping" value="Chocoalte"><br>
+
+        <label for="gen">Chocolate chips</label>
+        <input type="checkbox" id="ctop" name="topping" placeholder="Chocolate Chips"><br>
+
+        <label for="ctop">Other:</label>
+        <input type="text" id="ctop" name="topping">
+        </datalist><br>
+
+        <label for="ccol">Colors:</label><br>
+        <input type="color" id="ccol" name="color" value="Sprinkle color"><br>
+        <input type="color" id="ccol" name="color" value="Frosting color"><br>
+        <input type="color" id="ccol" name="color" value="Fondant color"><br>
+
+        <label for="Other">Have more personlizations or special requests youd like to make? Tell us!</label><br>
+        <textarea name="Person" id="Other" placeholder="Enter text"></textarea><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Payment information</legend>
+        <label>Payment type:</label><br>
+        <input type="radio" id="pay"><i class="fa-brands fa-paypal"></i><br>
+        <input type="radio" id="pay"><i class="fa-brands fa-cc-mastercard"></i><br>
+        <input type="radio" id="pay"><i class="fa-brands fa-cc-discover"></i></i><br>        
+        <input type="radio" id="pay"><i class="fa-brands fa-cc-amex"></i><br>
+        <input type="radio" id="pay"><i class="fa-brands fa-cc-visa"></i></i><br>
+
+        <label for="card">Credit card number:</label>
+        <input type="number" id="card" name="Payment" placeholder="0000 0000 0000 0000">
+
+        <label for="card">CVC:</label>
+        <input type="number" id="card" name="Payment" placeholder="000">
+        <label for="card">Expiration Date:</label>
+
+        <input type="date" id="card" name="Payment"><br><br>
+        <input type="submit" value="Submit">
+
+    </fieldset>
+    </form>
+</body>
+</html>
